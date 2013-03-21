@@ -6,7 +6,6 @@ Application cache manifest controller for Play framework
 
 Todo
 -----
-+   Fallback section support
 +   External resource support
 
 

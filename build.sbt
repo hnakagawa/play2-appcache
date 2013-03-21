@@ -8,6 +8,8 @@ organization := "com.github.hnakagawa"
 
 scalaVersion := "2.10.0"
 
+scalacOptions ++= Seq("-unchecked", "-deprecation", "-feature")
+
 // Dependencies
 
 libraryDependencies += "play" %% "play" % "2.1.0"
