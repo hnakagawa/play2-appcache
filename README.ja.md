@@ -4,14 +4,14 @@ Play Appcache
 Application cache manifest controller for Play framework
 
 
-Feature
+機能
 ------
-+  Can specify an asset resource directory
-+  Update manifest automatically if asset files are updated(Dev mode)
-+  Output manifest is changed according to the mode(Dev,Prod)
++  Assetリソースのディレクトリ指定
++  Assetファイル更新時にManifestファイルも自動更新(Devモード動作時)
++  動作モード(Dev,Prod)に応じた出力形式
 
 
-Install to local repository
+ローカルリポジトリにインストールします
 ------
 
 ```
@@ -20,7 +20,7 @@ $ cd play2-appcache/project-code
 $ play publish-local
 ```
 
-Configuration
+設定
 ------
 ## project/Build.scala
 
@@ -42,7 +42,8 @@ GET     /*name.appcache             controllers.AppCacheAssets.at(name)
 ```
 
 ## conf/appcache.conf
-'@[file path]' means asset resource.
+'@[ファイルパス]'はassetリソースを指定した事を意味し、ファイルパスがディレクトリを指す場合は自動展開されます。
+また、.coffeeや.less等の拡張子はそれぞれの出力ファイル形式(.js,.css)に置き換えられます。
 
 ```text
 example = {
@@ -54,10 +55,10 @@ example = {
 }
 ```
 
-## Test
+## 動作確認
 see http://localhost:9000/example.appcache
 
-The following is output in Dev mode.
+Devモードでは以下が出力されます。
 ```text
 CACHE MANIFEST
 #2013-03-24 23:27:51.000
@@ -72,7 +73,7 @@ FALLBACK:
 / /assets/error.html
 ```
 
-The following is output in Prod mode.
+Prodモードでは以下が出力されます。
 ```text
 CACHE MANIFEST
 #2013-03-24 23:27:51.000
