@@ -1,7 +1,7 @@
 Play Appcache
 =============
 
-Application cache manifest controller for Play framework
+HTML5 Application cache manifest controller for Play framework
 
 
 機能

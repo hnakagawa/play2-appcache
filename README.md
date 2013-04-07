@@ -1,7 +1,7 @@
 Play Appcache
 =============
 
-Application cache manifest controller for Play framework
+HTML5 Application cache manifest controller for Play framework
 
 
 Feature
@@ -54,7 +54,7 @@ example = {
 }
 ```
 
-## Test
+## Confirm behavior
 see http://localhost:9000/example.appcache
 
 The following is output in Dev mode.
