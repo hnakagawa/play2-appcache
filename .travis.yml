@@ -1,0 +1,19 @@
+language: scala
+scala:
+- 2.10.1
+
+jdk:
+- openjdk7
+- oraclejdk7
+
+env:
+- PLAY_VERSION=2.1.1
+
+before_script:
+- wget http://download.playframework.org/releases/play-${PLAY_VERSION}.zip
+- unzip -q play-${PLAY_VERSION}.zip
+script:
+-  cd project-code && sbt test
+
+notifications:
+email: false

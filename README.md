@@ -1,6 +1,8 @@
 Play Appcache
 =============
 
+[![Build Status](https://travis-ci.org/hnakagawa/play2-appcache.png)](https://travis-ci.org/hnakagawa/play2-appcache.png)
+
 HTML5 Application cache manifest controller for Play framework
 
 
